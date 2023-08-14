@@ -50,6 +50,8 @@ body {
   padding: 20px 80px;
   background-color: #e3e6f3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999; /* this is done to show the navbar section after adding the hero section*/
+  position: sticky;/* this is used so that the Navbar remains at constant position irrespective of scrolling down or up*/
 }
 /*for alligning the header sections in one line*/
 #Navbar {
@@ -120,4 +122,39 @@ body {
   font-size: 15px;
   
 
+}
+#feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#feature .F-box{
+  width: 180px; /*width of img*/
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0 ;
+  border-radius: 8px;
+  margin: 15px 0 ;
+
+
+
+}
+#feature .F-box:hover{
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+#feature .F-box img{
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+#feature .F-box h6{
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
 }
