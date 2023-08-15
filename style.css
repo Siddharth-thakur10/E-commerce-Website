@@ -37,6 +37,19 @@ p {
 .section-m1 {
   margin: 40px 0;
 }
+button.normal{ /* here i created a global button styling*/
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+
+}
 body {
   width: 100%;
 }
@@ -51,7 +64,9 @@ body {
   background-color: #e3e6f3;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999; /* this is done to show the navbar section after adding the hero section*/
-  position: sticky;/* this is used so that the Navbar remains at constant position irrespective of scrolling down or up*/
+  position: sticky; /* this is used so that the Navbar remains at constant position irrespective of scrolling down or up*/
+  top:0;
+  left: 0;
 }
 /*for alligning the header sections in one line*/
 #Navbar {
@@ -80,8 +95,9 @@ body {
   color: #088178;
 }
 #Navbar li a.active::after,      /* ::after is used to target pseudoelement after a.active*/
-#Navbar li a:hover::after {     /*this is for underline for every elemt of nav*/
-  
+#Navbar li a:hover::after {
+  /*this is for underline for every elemt of nav*/
+
   /*this code is for creating underline*/
   content: "";
   width: 40%;
@@ -92,7 +108,7 @@ body {
   left: 20px;
 }
 /*Homepage*/
-#hero{
+#hero {
   background-image: url(img/hero4.png);
   height: 90vh;
   width: 100%;
@@ -100,19 +116,19 @@ body {
   background-position: top 25% right 0;
   padding: 0 80px;
   display: flex; /*this is done to bring the text at center*/
-  flex-direction: column; /*as the text is already in horizontal so we set it column wise*/ 
+  flex-direction: column; /*as the text is already in horizontal so we set it column wise*/
   align-items: flex-start;
   justify-content: center;
 }
-#hero h4{
+#hero h4 {
   padding-bottom: 15px;
 }
-#hero h1{
+#hero h1 {
   color: #088178;
 }
-#hero button{
+#hero button {
   background-image: url(img/button.png);
-  background-color: transparent;    /*you'll be able to see any underlying content behind the button.*/
+  background-color: transparent; /*you'll be able to see any underlying content behind the button.*/
   color: #088178;
   border: 0;
   padding: 14px 80px 14px 65px;
@@ -120,41 +136,163 @@ body {
   cursor: pointer; /*This indicates to users that the button is clickable.*/
   font-weight: 700;
   font-size: 15px;
-  
-
 }
-#feature{
+#feature {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-#feature .F-box{
+#feature .F-box {
   width: 180px; /*width of img*/
   text-align: center;
   padding: 25px 15px;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-  border: 1px solid #cce7d0 ;
+  border: 1px solid #cce7d0;
   border-radius: 8px;
-  margin: 15px 0 ;
-
-
-
+  margin: 15px 0;
 }
-#feature .F-box:hover{
+#feature .F-box:hover {
   box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
 }
-#feature .F-box img{
+#feature .F-box img {
   width: 100%;
   margin-bottom: 10px;
-
 }
-#feature .F-box h6{
+#feature .F-box h6 {
   display: inline-block;
   padding: 9px 8px 6px 8px;
   line-height: 1;
   border-radius: 4px;
   color: #088178;
   background-color: #fddde4;
+}
+#feature .F-box:nth-child(2) h6 {
+  /* we took nth child 2 because first feature is given correct coloe and we to change for others*/
+
+  background-color: #cdebbc;
+}
+#feature .F-box:nth-child(3) h6 {
+  
+
+  background-color: #d1e8f2;
+}
+#feature .F-box:nth-child(4) h6 {
+  
+
+  background-color: #cdd4f8;
+}
+#feature .F-box:nth-child(5) h6 {
+  
+
+  background-color: #f6dbf6;
+}
+#feature .F-box:nth-child(6) h6 {
+  
+
+  background-color: #fff2e5;
+}
+/*-----------------------------*/
+#Product1 {
+  text-align: center;
+}
+#Product1 .pro-container { 
+  display: flex; /* using this to display featured products in horizontal way not vertical*/
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap; /* this is used to wrap the products properly as i have 8 products i want 4 first and then below 4, this is done by flex wrap*/
+
+
+}
+#Product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+  margin: 15px 0;
+  transition: 02.s ease;
+  position: relative;
+}
+#Product1 .pro img{ /* THIS will resize the product image*/
+
+  width: 100%;
+  border-radius: 20px;
+}
+#Product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08); /* to make 3d look like product is coming out of website*/
+}
+
+#Product1 .pro .desc{
+  text-align: start;
+  padding-top: 10px;
+
+}
+#Product1 .pro .desc span{
+  color: #606063;
+  font-size: 12px;
+}
+#Product1 .pro .desc h5{
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+#Product1 .pro .desc i{
+  color: rgb(243, 181, 25);
+  font-size: 12px;
+}
+#Product1 .pro .desc h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  
+}
+#Product1 .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute; /* whenever we use position relative in child elemnt we to go to parent element and use position relative there*/
+  bottom: 10px;
+  right: 10px;
+
+}
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh; /* height is given because it was covering only the text i wanted the background image to cover little bit more space so the the text will be at the center of image*/
+  background-size: cover;
+  background-position: center;
+}
+#banner h4{
+  color: #fff;
+  font-size: 16px;
+
+}
+#banner h2{
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+}
+#banner h2 span{
+  color: #ef3636;
+  
+  
+}
+#banner button:hover{
+  background-color:#088178 ;
+  color: #fff;
+  
 }
