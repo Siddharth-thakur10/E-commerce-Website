@@ -22,9 +22,16 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact">Contact</a></li>
           <li>
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="cart.html" id="lg-bag"><i class="fa-solid fa-bag-shopping"></i></a>
           </li>
+          <!--Close button of menu-->
+          <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
         </ul>
+        <!-- Hamburger menu for mobile in mobile responsiveness-->
+        <div id="mobile">
+          <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          <i id="bar" class="fas fa-outdent"></i>
+        </div>
       </div>
     </section>
     <section id="hero">
@@ -188,6 +195,61 @@
       <h2>Up to <span>70% Off</span> on All T-shirts & Accessories</h2>
       <button class="normal">Explore More</button>
     </section>
+    <section id="newsletter" class="section-p1 section-m1">
+      <!-- as i can see i have two sections in my newsletter section and bot are in same line so i will create two div tags -->
+      <div class="newstext">
+        <h4>Signup for news Letter</h4>
+        <p>Get E-mail for upcoming new products and <span> offers</span></p>
+
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your Email Address">
+        <button class="normal">Signup</button>
+      </div>
+    </section>
+    <footer class="section-p1">
+      <div class="socialmedia">
+        <h4>Follow us</h4>
+        <div class="icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact us</a>
+        
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View Cart</a>
+        <a href="#">My wishlist</a>
+        <a href="#">Track my Order</a>
+        
+      </div>
+      <div class="col install" >
+        <h4>Install App</h4>
+        <div class="row">
+          <img src="img/pay/app.jpg" alt="">
+          <img src="img/pay/play.jpg" alt="">
+
+        </div>
+        <p>Secured Payment gateways</p>
+        <img src="img/pay/pay.png" alt="">
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2023 by Siddharth ™️ </p>
+      </div>
+      
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

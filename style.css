@@ -107,6 +107,14 @@ body {
   bottom: -4px; /*this adds underline slightly below the text*/
   left: 20px;
 }
+#mobile{
+  display: none;
+  align-items: center;
+}
+/* the close button is only for mobile so it should not get displayed on the laptop screen*/
+#close{
+  display: none;
+}
 /*Homepage*/
 #hero {
   background-image: url(img/hero4.png);
@@ -296,3 +304,169 @@ body {
   color: #fff;
   
 }
+
+/* Newletter */
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image:url(img/banner/b14.png) ;
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+}
+#newsletter h4{
+  font-size:22px ;
+  font-weight: 700;
+  color: #fff;
+
+}
+#newsletter p{
+  font-size:14px ;
+  font-weight: 600;
+  color: #818ea0;
+
+
+}
+#newsletter p span{
+  color: #ffbd27;
+
+}
+/* styling signup button */
+#newsletter input{
+  height: 3.124rem;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+#newsletter button{
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+#newsletter .form{
+  display: flex;
+  width: 30%;
+
+}
+/* footer design */
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+ 
+}
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+  margin: 0 0 8px 0;
+ 
+}
+footer .socialmedia{
+  margin-top: 20px;
+
+
+}
+footer .socialmedia i{
+  color:#465b52;
+  padding-right: 4px;
+  cursor: pointer;
+  
+  
+
+}
+footer .install .row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+footer .socialmedia i:hover,
+footer a:hover{
+  color: #088178;
+}
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+/* for responsiveness of website */
+/* Media query */
+@media (max-width:799px){
+  #Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px ;
+    transition: 0.3s;
+
+}
+#Navbar.active{
+  right:0px;
+}
+#Navbar li{
+  margin: 25px;
+}
+#mobile{
+  display: flex;
+  align-items: center;
+}
+#mobile i{
+  color: #1a1a1a;
+  font-size: 24px;
+  padding-left: 20px;
+
+}
+#close{
+  display: initial; /*this is applied because when we set it display none in above for not getting displayed on laptop then it also got removed for mobile page so we have to set display initial to add it*/
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  color: #222;
+  font-size: 24px;
+
+
+}
+#lg-bag{
+  display: none;
+}
+}
+
+
